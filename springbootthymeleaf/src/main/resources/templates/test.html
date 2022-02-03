@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <p th:if="${score}>=90">优秀</p>-->
+<!--    <p th:if="${score}<90">良好</p>-->
+
+<!--    <p th:unless="${score}<90">优秀</p>-->
+<!--    <p th:unless="${score}>=90">良好</p>-->
+
+<!--    <div th:switch="${studentId}">-->
+<!--        <p th:case="1">张三</p>-->
+<!--        <p th:case="2">李四</p>-->
+<!--        <p th:case="3">王五</p>-->
+<!--    </div>-->
+
+<!--    <form th:action="@{/hello/login}" method="post">-->
+<!--        <input type="submit"/>-->
+<!--    </form>-->
+
+<!--    <form th:action="${url}" method="post">-->
+<!--        <input type="submit"/>-->
+<!--    </form>-->
+
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <th>编号</th>-->
+<!--            <th>姓名</th>-->
+<!--        </tr>-->
+<!--        <tr th:each="user:${list}">-->
+<!--            <td th:text="${user.id}"/>-->
+<!--            <td th:text="${user.name}"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+
+<!--    <input type="text" th:value="${value}"/>-->
+
+<!--    <img th:src="${src}"/>-->
+<!--    <img th:src="@{/1.png}"/>-->
+
+<!--    <a th:href="${href}">百度</a>-->
+
+<!--    <select>-->
+<!--        <option th:each="user:${list}"-->
+<!--                th:value="${user.id}"-->
+<!--                th:text="${user.name}"-->
+<!--                th:selected="${user.name == name}"-->
+<!--        ></option>-->
+<!--    </select>-->
+
+<!--    <input th:attr="value=${attr}"/><br/>-->
+<!--    <input th:value="${attr}"/>-->
+
+<!--    <p th:text="${#request.getAttribute('value')}"></p>-->
+<!--    <p th:text="${#session.getAttribute('value')}"></p>-->
+<!--    <p th:text="${#servletContext.getAttribute('value')}"></p>-->
+<!--    <p th:text="${#response}"></p>-->
+
+<!--    <p th:text="${name}"></p>-->
+<!--    <p th:text="${#request.getAttribute('name')}"></p>-->
+<!--    <p th:text="${session.name}"></p>-->
+<!--    <p th:text="${#session.getAttribute('name')}"></p>-->
+
+    date格式化: <span th:text="${#dates.format(date, 'yyy-MM-dd')}"></span><br/>
+    当前日期: <span th:text="${#dates.createToday()}"></span><br/>
+    当前时间: <span th:text="${#dates.createNow()}"></span><br/>
+    Calendar格式化:  <span th:text="${#calendars.format(calendar, 'yyy-MM-dd')}"></span><br/>
+    Number百分比格式:  <span th:text="${#numbers.formatPercent(number, 2, 2)}"></span><br/>
+    name是否为空: <span th:text="${#strings.isEmpty(string)}"></span><br/>
+    name的长度: <span th:text="${#strings.length(string)}"></span><br/>
+    name拼接: <span th:text="${#strings.concat('Hi', string)}"></span><br/>
+    boolean是否为true: <span th:text="${#bools.isTrue(boolean)}"></span><br/>
+    arrays的长度: <span th:text="${#arrays.length(array)}"></span></br>
+    arrays是否包含张三: <span th:text="${#arrays.contains(array, '张三')}"></span><br/>
+    List是否为空: <span th:text="${#lists.isEmpty(list)}"></span><br/>
+    List的长度: <span th:text="${#lists.size(list)}"></span><br/>
+    Set是否为空: <span th:text="${#sets.isEmpty(set)}"></span><br/>
+    Set的长度: <span th:text="${#sets.size(set)}"></span><br/>
+    Map是否为空: <span th:text="${#maps.isEmpty(map)}"></span><br/>
+    Map的长度: <span th:text="${#maps.size(map)}"></span><br/>
+</body>
+</html>
